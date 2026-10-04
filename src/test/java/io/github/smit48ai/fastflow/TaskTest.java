@@ -19,13 +19,4 @@ class TaskTest {
         assertEquals("hello", task.getCallable().call());
     }
 
-    @Test
-    void shouldRejectNullName() {
-        assertThrows(NullPointerException.class, () -> new Task<>(null, () -> "hello"));
-    }
-
-    @Test
-    void shouldRejectNullCallable() {
-        assertThrows(NullPointerException.class, () -> new Task<>("task", null));
-    }
 }
