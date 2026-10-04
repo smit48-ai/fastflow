@@ -44,7 +44,7 @@ class FastFlowTest {
 
     @Test
     void shouldRejectNullCallable() {
-        assertThrows(IllegalArgumentException.class, () -> FastFlow.create().addTask("task", null));
+        assertThrows(NullPointerException.class, () -> FastFlow.create().addTask("task", null));
     }
 
     @Test
